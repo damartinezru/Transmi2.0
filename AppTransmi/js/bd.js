@@ -1,4 +1,5 @@
 
+
 var db = new loki('trasmilenio.db', {
   autoload: true,
   autoloadCallback : databaseInitialize,
@@ -36,6 +37,6 @@ function databaseInitialize() {
           });
         });
         $("#title").html("Registro importados: " + data.result.records.length);
-        
+
       });
      
