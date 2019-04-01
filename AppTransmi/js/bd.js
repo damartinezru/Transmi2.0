@@ -51,7 +51,7 @@ function databaseInitialize() {
         //   }
         // })
 
-            function VerWhere() {
+            function grabar() {
       estaciones.where(function (estacion) {
         if(estacion.Estacion=="Universidad Nacional")
         {  
