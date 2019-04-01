@@ -152,7 +152,6 @@ function databaseInitialize() {
       }
          
         $("#title").html("Registro importados: " + data.result.records.length);
-        var odin = estaciones.findOne({ Estacion:'BOSA' });
-	      console.log(odin);
+
       });
      
