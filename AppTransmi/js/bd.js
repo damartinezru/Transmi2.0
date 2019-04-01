@@ -23,6 +23,19 @@ $.ajax({
   url: "http://datosabiertos.bogota.gov.co/api/3/action/datastore_search",
 })
 
+.done(function (data) {
+  data.result.records.forEach(item => {
+    estaciones.insert({
+      Estacion: item.Name,
+      Troncal: item.Corredor,
+      Codigo: item.Id,
+      LatLon: { Lat: item.Latitud, Lon: item.Longitud },
+      Rutas:[]
+    });
+  });
+  $("#title").html("Registro importados: " + data.result.records.length);
+});
+
 function grabar(){
   estaciones.where(function (estacion){
     if(estacion.Estacion == "LA DESPENSA"){
@@ -117,16 +130,3 @@ function grabar(){
     }
   });
 }
-
-.done(function (data) {
-  data.result.records.forEach(item => {
-    estaciones.insert({
-      Estacion: item.Name,
-      Troncal: item.Corredor,
-      Codigo: item.Id,
-      LatLon: { Lat: item.Latitud, Lon: item.Longitud },
-      Rutas:[]
-    });
-  });
-  $("#title").html("Registro importados: " + data.result.records.length);
-});
