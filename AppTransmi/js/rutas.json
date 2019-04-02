@@ -1,0 +1,46 @@
+RutasJson:'[{ "ruta": "G42", "vagon": "1" }, { "ruta": "G43", "vagon": "1" }]';
+
+rutasPsuba: `[
+{"ruta": "7", "vagon": "0", "nombreEstacion":"Portal de Suba" }, 
+{ "ruta": "7", "vagon": "0", "nombreEstacion":"Portal de Suba" },
+{ "ruta": "B50", "vagon":"0", "nombreEstacion":"Portal de Suba" },
+{ "ruta": "B56", "vagon": "0","nombreEstacion":"Portal de Suba" },
+{ "ruta": "C15", "vagon": "0", "nombreEstacion":"Portal de Suba"},
+{ "ruta": "C17", "vagon": "0", "nombreEstacion":"Portal de Suba"},
+{ "ruta": "C19", "vagon": "0","nombreEstacion":"Portal de Suba" },
+{ "ruta": "C29", "vagon": "0", "nombreEstacion":"Portal de Suba"},
+{ "ruta": "C30", "vagon": "0", "nombreEstacion":"Portal de Suba"},
+{ "ruta": "C50", "vagon": "0", "nombreEstacion":"Portal de Suba"},
+{ "ruta": "C73", "vagon": "0", "nombreEstacion":"Portal de Suba"},
+{ "ruta": "F19", "vagon": "0", "nombreEstacion":"Portal de Suba"},
+{ "ruta": "F29", "vagon": "0","nombreEstacion":"Portal de Suba" },
+{ "ruta": "G30", "vagon": "0", "nombreEstacion":"Portal de Suba"},
+{ "ruta": "H15", "vagon": "0", "nombreEstacion":"Portal de Suba"},
+{ "ruta": "H17", "vagon": "0" , "nombreEstacion":"Portal de Suba"},
+{ "ruta": "J73", "vagon": "0","nombreEstacion":"Portal de Suba"},
+
+{ "ruta": "8" "vagon": "1","nombreEstacion":"Calle 100"},
+{ "ruta": "8", "vagon": "1","nombreEstacion":"Calle 100"},
+{ "ruta": "B10", "vagon": "2","nombreEstacion":"Calle 100"},
+{ "ruta": "B12", "vagon": "1","nombreEstacion":"Calle 100"},
+{ "ruta": "B13", "vagon": "1","nombreEstacion":"Calle 100"},
+{ "ruta": "B14", "vagon": "3","nombreEstacion":"Calle 100"},
+{ "ruta": "B50", "vagon": "2","nombreEstacion":"Calle 100"},
+{ "ruta": "B71", "vagon": "3","nombreEstacion":"Calle 100"},
+{ "ruta": "B74", "vagon": "3","nombreEstacion":"Calle 100"},
+{ "ruta": "B75", "vagon": "2","nombreEstacion":"Calle 100"},
+{ "ruta": "C50", "vagon": "2","nombreEstacion":"Calle 100"},
+{ "ruta": "D10", "vagon": "3","nombreEstacion":"Calle 100"},
+{ "ruta": "F14", "vagon": "3","nombreEstacion":"Calle 100"},
+{ "ruta": "G12", "vagon": "1","nombreEstacion":"Calle 100"},
+{ "ruta": "H13", "vagon": "2","nombreEstacion":"Calle 100"},
+{ "ruta": "H75", "vagon": "2","nombreEstacion":"Calle 100"},
+{ "ruta": "J74", "vagon": "3","nombreEstacion":"Calle 100"},
+
+{"ruta": "2", "vagon": "1","nombreEstacion":"Policarpa"},
+{"ruta": "2", "vagon": "1","nombreEstacion":"Policarpa"},
+{"ruta": "H83", "vagon": "0","nombreEstacion":"Policarpa"},
+{"ruta": "M83", "vagon": "0","nombreEstacion":"Policarpa"},
+
+
+]`
