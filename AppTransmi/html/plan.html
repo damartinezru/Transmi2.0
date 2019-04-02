@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>PLANEE SU RUTA</title>
+  <link rel="stylesheet" href="../css/estilo.css">
+  <link rel="stylesheet" type="text/css" href="../css/highslide.css" />
+  <link rel="stylesheet" type="text/css" href="../mapa/highslide.css" />
+  <link rel="stylesheet" type="text/css" href="../css/highslide.css" />
+  <script type="text/javascript" src="../js/highslide-with-html.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+  <script type="text/javascript" src="../js/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+    crossorigin="anonymous"></script>
+  <script src="http://lokijs.org/bower_components/lokijs/src/lokijs.js"></script>
+  <script type="text/javascript" src="../js/bd.js"></script>
+  <script type="text/json" src="../js/rutas.json"
+  <script>
+    hs.graphicsDir = '../graphics/';
+    hs.outlineType = 'rounded-white';
+    hs.fadeInOut = true;
+    hs.headingEval = 'this.a.title';
+  </script>
+
+</head>
+
+<body>
+  <section>
+    <div id="agrupar">
+      <header id="cabecera">
+
+        <img src="../images/logo.png" alt="Logo transmilenio" class="logo">
+
+
+      </header>
+      <nav id="menu">
+        <ul>
+          <li><a class="link" href="../index.html" title="Inicio">INICIO</a></li>
+          <li><a class="link" href="novedades.html" title="servicios">SERVICIOS</a> </li>
+          <li><a class="link" href="nosotros.html" title="sobre nosotros">SOBRE NOSOTROS</a></li>
+          <li><a class="link" href="plan.html" title="planee su ruta">PLANEE SU RUTA</a></li>
+          <li><a class="link" href="contacto.html" title="contacto">CONTACTO</a></li>
+        </ul>
+      </nav>
+
+      <article>
+
+
+
+        <img src="../images/MapaCompleto.jpg" alt="" usemap="#imgmap1" style="border: none;" />
+
+        <map id="imgmap1" name="imgmap1">
+          <area shape="rect" coords="17,68,221,114" onclick="hs.htmlExpand(this,{contentId:'troncalnorte'})" />
+          <area shape="rect" coords="418,79,221,125"onclick="hs.htmlExpand(this,{contentId:'troncalCaracas'})" />
+          <area shape="rect" coords="557,43,358,68" onclick="hs.htmlExpand(this,{contentId:'troncal10'})" />
+          <area shape="poly" coords="167,103,218,172,441,175,432,60,405,67,405,152,230,151,206,103"
+            onclick="return hs.htmlExpand(this,{contentId:'troncalNQS'})" />
+          <area shape="poly" coords="375,15,403,37,407,88,386,91,388,51,367,30"
+            onclick="return hs.htmlExpand(this,{contentId:'troncalEje'})" />
+          <area shape="poly" coords="423,80,474,88,589,159,506,153,468,115,426,103"
+            onclick="return hs.htmlExpand(this,{contentId:'troncalCaracasSur'})" />
+          <area shape="poly" coords="540,159,560,181,554,214,538,186,522,163"
+            onclick="return hs.htmlExpand(this,{contentId:'troncalTunal'})" />
+          <area shape="poly" coords="499,201,498,263,562,335,534,342,478,269,472,199,429,172,435,144"
+            onclick="return hs.htmlExpand(this,{contentId:'troncalNQSsur'})" />
+          <area shape="poly" coords="434,274,434,311,505,321,404,192,404,100,383,102,386,173,386,219,410,246"
+            onclick="return hs.htmlExpand(this,{contentId:'troncalAmericas'})" />
+          <area shape="poly" coords="202,154,110,156,76,199,73,251,101,255,98,195,128,173,148,168,201,171"
+            onclick="return hs.htmlExpand(this,{contentId:'troncalSuba'})" />
+          <area shape="poly" coords="224,99,222,137,159,195,138,223,138,293,162,279,162,234,202,193,234,161,251,112"
+            onclick="return hs.htmlExpand(this,{contentId:'troncal80'})" />
+          <area shape="poly"
+            coords="342,156,311,199,290,233,289,266,293,351,327,351,331,241,367,174,373,81,368,27,342,29,343,57"
+            onclick="return hs.htmlExpand(this,{contentId:'troncal26'})" />
+          <area shape="rect" coords="124,43,354,69" onclick="return hs.htmlExpand(this,{contentId:'troncal26'})" />
+
+
+        </map>
+
+
+        <div class="highslide-html-content" id="troncalCaracas">
+
+          <div class="highslide-header">
+            <li class="highslide-close"><a href="#" onclick="return hs.close(this)">cerrar</a></li>
+          </div>
+
+          <div class="highslide-body">
+            <h2>A| Caracas</h2>
+            <img width="370" src="../images/Caracas.jpg" alt="gráfica alusiva troncal caracas " />
+            <div id='Caracas'>
+              <input type="button" value="Estaciones" onclick="imprimir('Caracas')">
+              
+            </div>
+          </div>
+
+          <div class="highslide-footer">
+            <div><span class="highslide-resize" title="Resize"></span></div>
+          </div>
+
+        </div>
+
+        <div class="highslide-html-content" id="troncalnorte">
+
+          <div class="highslide-header">
+            <li class="highslide-close"><a href="#" onclick="return hs.close(this)">cerrar</a></li>
+          </div>
+
+          <div class="highslide-body">
+            <h2>B| Norte </h2>
+            <img width="370" src="../images/AutoNorte.jpg" alt="gráfica alusiva troncal Norte " />
+            <div id="Autonorte">
+              <input type="button" value="Estaciones" onclick="imprimir('Autonorte')">
+            </div>
+          </div>
+
+          <div class="highslide-footer">
+            <div><span class="highslide-resize" title="Resize"></span></div>
+          </div>
+
+        </div>
+
+        <div class="highslide-html-content" id="troncalSuba">
+
+          <div class="highslide-header">
+            <li class="highslide-close"><a href="#" onclick="return hs.close(this)">cerrar</a></li>
+          </div>
+
+          <div class="highslide-body">
+            <h2>C| Suba</h2>
+            <img width="370" src="../images/Suba.jpg" alt="gráfica alusiva Troncal Suba " />
+
+            <div id="Suba">
+              <input type="button" value="Estaciones" onclick="imprimir('Suba')">
+              
+            </div>
+
+          </div>
+
+          <div class="highslide-footer">
+            <div><span class="highslide-resize" title="Resize"></span></div>
+          </div>
+
+        </div>
+
+        <div class="highslide-html-content" id="troncal80">
+
+          <div class="highslide-header">
+            <li class="highslide-close"><a href="#" onclick="return hs.close(this)">cerrar</a></li>
+          </div>
+
+          <div class="highslide-body">
+            <h2>D| Portal 80</h2>
+            <img width="370" src="../images/Calle80.jpg" alt="gráfica alusiva Portal de la 80 " />
+
+          </div>
+
+          <div class="highslide-footer">
+            <div><span class="highslide-resize" title="Resize"></span></div>
+          </div>
+
+        </div>
+
+        <div class="highslide-html-content" id="troncalNQS">
+
+          <div class="highslide-header">
+            <li class="highslide-close"><a href="#" onclick="return hs.close(this)">cerrar</a></li>
+          </div>
+
+          <div class="highslide-body">
+            <h2>E| NQS Central</h2>
+            <img width="370" src="../images/NQSCentral.jpg" alt="gráfica alusiva NQS central " />
+
+          </div>
+
+          <div class="highslide-footer">
+            <div><span class="highslide-resize" title="Resize"></span></div>
+          </div>
+
+        </div>
+
+        <div class="highslide-html-content" id="troncalAmericas">
+
+          <div class="highslide-header">
+            <li class="highslide-close"><a href="#" onclick="return hs.close(this)">cerrar</a></li>
+          </div>
+
+          <div class="highslide-body">
+            <h2>F| Troncal Americas</h2>
+            <img width="370" src="../images/Americas.jpg" alt="gráfica alusiva portal Americas " />
+
+          </div>
+        </div>
+
+        <div class="highslide-html-content" id="troncalNQSsur">
+
+          <div class="highslide-header">
+            <li class="highslide-close"><a href="#" onclick="return hs.close(this)">cerrar</a></li>
+          </div>
+
+          <div class="highslide-body">
+            <h2>G| NQS sur</h2>
+            <img width="370" src="../images/NQSSur.jpg" alt="gráfica alusiva troncal NQS sur " />
+
+          </div>
+
+          <div class="highslide-footer">
+            <div><span class="highslide-resize" title="Resize"></span></div>
+          </div>
+
+        </div>
+
+        <div class="highslide-html-content" id="troncalCaracasSur">
+
+          <div class="highslide-header">
+            <li class="highslide-close"><a href="#" onclick="return hs.close(this)">cerrar</a></li>
+          </div>
+
+          <div class="highslide-body">
+            <h2>H| Caracas Sur</h2>
+            <img width="370" src="../images/CaracasSur.jpg" alt="gráfica alusiva troncal caracas sur " />
+
+          </div>
+
+          <div class="highslide-footer">
+            <div><span class="highslide-resize" title="Resize"></span></div>
+          </div>
+        </div>
+
+        <div class="highslide-html-content" id="troncalTunal">
+
+          <div class="highslide-header">
+            <li class="highslide-close"><a href="#" onclick="return hs.close(this)">cerrar</a></li>
+          </div>
+
+          <div class="highslide-body">
+            <h2>H| Caracas sur Tunal</h2>
+            <img width="370" src="../images/CaracasTunalSur.jpg" alt="gráfica alusiva troncal Tunal " />
+
+          </div>
+
+          <div class="highslide-footer">
+            <div><span class="highslide-resize" title="Resize"></span></div>
+          </div>
+
+        </div>
+
+        <div class="highslide-html-content" id="troncalEje">
+
+          <div class="highslide-header">
+            <li class="highslide-close"><a href="#" onclick="return hs.close(this)">cerrar</a></li>
+          </div>
+
+          <div class="highslide-body">
+            <h2>J| Eje Ambiental</h2>
+            <img width="370" src="../images/EjeAmbiental.jpg" alt="gráfica alusiva troncal eje Ambiental " />
+
+          </div>
+
+          <div class="highslide-footer">
+            <div><span class="highslide-resize" title="Resize"></span></div>
+          </div>
+
+        </div>
+
+        <div class="highslide-html-content" id="troncal26">
+
+          <div class="highslide-header">
+            <li class="highslide-close"><a href="#" onclick="return hs.close(this)">cerrar</a></li>
+          </div>
+
+          <div class="highslide-body">
+            <h2>K| Calle 26</h2>
+            <img width="370" src="../images/Calle26.jpg" alt="gráfica alusiva troncal Calle 26 " />
+
+          </div>
+        </div>
+        <div class="highslide-footer">
+          <div><span class="highslide-resize" title="Resize"></span></div>
+        </div>
+
+    </div>
+
+    <div class="highslide-html-content" id="troncal10">
+
+      <div class="highslide-header">
+        <li class="highslide-close"><a href="#" onclick="return hs.close(this)">cerrar</a></li>
+      </div>
+
+      <div class="highslide-body">
+        <h2>L| Carrera10</h2>
+        <img width="370" src="../images/CarreraDecima.jpg" alt="gráfica alusiva troncal Carrera 10 " />
+      </div>
+
+      <div class="highslide-footer">
+        <div><span class="highslide-resize" title="Resize"></span></div>
+      </div>
+
+    </div>
+
+    <div class="highslide-html-content" id="troncalMuseo">
+      <div class="highslide-header">
+        <li class="highslide-close"><a href="#" onclick="return hs.close(this)">cerrar</a></li>
+      </div>
+
+      <div class="highslide-body">
+        <h2>M| Carrera Septima</h2>
+        <img width="370" src="../images/CarreraSeptima.jpg" alt="gráfica alusiva troncal Carrera Septima " />
+
+      </div>
+
+      <div class="highslide-footer">
+        <div><span class="highslide-resize" title="Resize"></span></div>
+      </div>
+    </div>
+    </article>
+  </section>
+  </div>
+  <footer id="pie">
+    <ul class="map">
+      <li>
+        <h2><a href="mapa_sitio.html" class="map">MAPA DEL SITIO</a> <br> <br></h2>
+      </li>
+      <li>
+        <h2><a href="faq.html" class="map"> FAQ</a></h2>
+      </li>
+    </ul>
+    <p>
+      Diseñado y Desarrollado por el equipo TransMe. 2019. <br> Teléfono +571 7185641 | Móvil +57 3219883340 <br> Carrera
+      28 #66, Código Postal 1110101 Bogotá, Colombia | info@transmi.com <br> Conozca nuestro Aviso de Privacidad - Políticas
+      de privacidad y de tratamiento de datos <br>
+    </p>
+    <a href="http://www.facebook.com"><img class="redes" src="../images/facebook.png" alt="Logo de Facebook"></a>
+    <a href="http://www.twitter.com"><img class="redes" src="../images/twitter.png" alt="Logo de Twitter"></a>
+    <a href="http://web.whatsapp.com/"><img class="redes" src="../images/whatsapp.png" alt="Logo de Whatsapp"></a>
+  </footer>
+</body>
+
+</html>
