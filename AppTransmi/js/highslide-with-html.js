@@ -2481,7 +2481,7 @@ hs.addEventListener(document, 'ready', hs.getAnchors);
 hs.addEventListener(window, 'load', hs.preloadImages);
 hs.addEventListener(window, 'load', hs.preloadAjax);
 }
-=======
+
 /** 
  * Name:    Highslide JS
  * Version: 5.0.0 (2016-05-24)

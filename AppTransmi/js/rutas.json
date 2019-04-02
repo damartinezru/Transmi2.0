@@ -28,3 +28,11 @@ rutas = '[{"ruta":"G42","vagon":"1","estacion":"LA DESPENSA"},{"ruta":"G43","vag
     {"ruta":"7","vagon":"1","estacion":"Clinica Shaio"},{"ruta":"B50","vagon":"2","estacion":"Clinica Shaio"},{"ruta":"C17","vagon":"2","estacion":"Clinica Shaio"},{"ruta":"C29","vagon":"1","estacion":"Clinica Shaio"},{"ruta":"C30","vagon":"1","estacion":"Clinica Shaio"},{"ruta":"C50","vagon":"2","estacion":"Clinica Shaio"},{"ruta":"F29","vagon":"1","estacion":"Clinica Shaio"},{"ruta":"G30","vagon":"1","estacion":"Clinica Shaio"},{"ruta":"H17","vagon":"2","estacion":"Clinica Shaio"},
     {"ruta":"7","vagon":"1","estacion":"Humedal Córdoba"},{"ruta":"C15","vagon":"1","estacion":"Humedal Córdoba"},{"ruta":"H15","vagon":"1","estacion":"Humedal Córdoba"},
     {"ruta":"7","vagon":"1","estacion":"Niza - Calle 127"},{"ruta":"C15","vagon":"1","estacion":"Niza - Calle 127"},{"ruta":"C73","vagon":"1","estacion":"Niza - Calle 127"},{"ruta":"H15","vagon":"2","estacion":"Niza - Calle 127"},{"ruta":"J73","vagon":"1","estacion":"Niza - Calle 127"}]';
+rutasJson='[{ "ruta": "G42", "vagon": "1", "nombreEstacion":"La Despensa"},
+            { "ruta": "G43", "vagon": "1", "nombreEstacion":"La Despensa"},
+            { "ruta": "G45", "vagon": "2", "nombreEstacion":"La Despensa"},
+            { "ruta": "K42", "vagon": "1","nombreEstacion":"La Despensa" },
+            { "ruta": "K43", "vagon": "1","nombreEstacion":"La Despensa"},
+            { "ruta": "7", "vagon":"0", "nombreEstacion":"Portal de Suba" },
+            { "ruta": "B50", "vagon":"0", "nombreEstacion":"Portal de Suba" },
+            { "ruta": "H17", "vagon":"0", "nombreEstacion":"Portal de Suba" }]'';
