@@ -42,5 +42,10 @@ rutasPsuba: `[
 {"ruta": "H83", "vagon": "0","nombreEstacion":"Policarpa"},
 {"ruta": "M83", "vagon": "0","nombreEstacion":"Policarpa"},
 
-
+{"ruta": "4", "vagon": "2","nombreEstacion":"Movistar Arena"},
+{"ruta": "4", "vagon": "2","nombreEstacion":"Movistar Arena"},
+{"ruta": "7", "vagon": "1", "nombreEstacion":"Movistar Arena" }, 
+{ "ruta": "7", "vagon": "1", "nombreEstacion":"Movistar Arena" },
+{"ruta": "B72", "vagon": "2","nombreEstacion":"Movistar Arena"},
+{"ruta": "M83", "vagon": "1","nombreEstacion":"Movistar Arena"},
 ]`
