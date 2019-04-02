@@ -44,7 +44,7 @@ function LeerJson() {
     rutas.insert({
       Ruta: item.ruta,
       Vagon: item.vagon,
-      Nomest: item.nombreEstacion,
+      Nomest: item.estacion,
     })
   });
   console.log(rutas.find());
