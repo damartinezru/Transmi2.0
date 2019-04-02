@@ -281,4 +281,53 @@ function grabar() {
       ];
     }
   });
+
+  
+}
+
+
+function imprimir(data){
+  document.getElementById(data).innerHTML='';
+  const panel=document.getElementById(data);
+  const contenedor=document.createElement('div');
+  contenedor.setAttribute('class','contenedor');
+  panel.appendChild(contenedor);
+  contenedor.innerHTML='';
+  estaciones.find({'Troncal':data}).forEach(item=>
+  { const uli=document.createElement('ul');
+    uli.setAttribute('class','uli');
+    const li=document.createElement('li');
+    const btn=document.createElement('input');
+    btn.setAttribute('type','button');
+    btn.setAttribute('class','btn');
+    li.textContent=item.Estacion;
+    btn.value=item.Estacion;
+    contenedor.appendChild(uli);
+    uli.appendChild(btn);
+    
+     if($(".btn").click(
+     function(){
+      const contenedor2=document.createElement('div');
+      contenedor2.setAttribute('class','contenedor2');
+      contenedor2.setAttribute('style','float:right')
+      panel.appendChild(contenedor2);
+      estaciones.find({'Estacion':btn.value}).forEach(item=>
+      {  
+         const uli2=document.createElement('ul');
+         uli2.setAttribute('class','uli2');
+         const btn2=document.createElement('input');
+         btn2.setAttribute('type','button');
+         btn2.value=item.Rutas; //aqui se pasar la coleccion de rutas
+         contenedor2.appendChild(uli2);
+         uli2.appendChild(btn2);
+         
+      });
+    }
+    ));
+
+  });
+
+ 
+  
+  
 }
