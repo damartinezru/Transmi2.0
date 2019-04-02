@@ -81,6 +81,7 @@ function imprimir(data) {
 
   });
 
+
   if ($(".btn").click(
     function () {
       const contenedor2 = document.createElement('div');
@@ -90,17 +91,16 @@ function imprimir(data) {
 
       const uli2 = document.createElement('ul');
       uli2.setAttribute('class', 'uli2');
-      const btn2 = document.createElement('input');
-      btn2.setAttribute('type', 'button');
       
-      // MostrarRutas(this.value);
+      
       $.each(MostrarRutas(this.value), function (index,value) {
+        const btn2 = document.createElement('input');
+        btn2.setAttribute('type', 'button');
         btn2.value = value.Ruta;
-        // html+=`<button class='${value.ruta}'>`
-      })
-
-      contenedor2.appendChild(uli2);
-      uli2.appendChild(btn2);
+        contenedor2.appendChild(uli2);
+        uli2.appendChild(btn2);
+        
+      });
 
     }
   ));
