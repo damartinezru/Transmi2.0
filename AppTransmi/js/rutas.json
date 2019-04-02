@@ -1,1 +1,7 @@
-rutasJson='[{ "ruta": "G42", "vagon": "1" }, { "ruta": "G43", "vagon": "1" }]';
+rutasJson=`[{ "ruta": "G42", "vagon": "1", "nombreEstacion":"La Despensa"},
+            { "ruta": "G43", "vagon": "1", "nombreEstacion":"La Despensa"},
+            { "ruta": "G45", "vagon": "2", "nombreEstacion":"La Despensa"},
+            { "ruta": "K42", "vagon": "1","nombreEstacion":"La Despensa" },
+            { "ruta": "K43", "vagon": "1","nombreEstacion":"La Despensa"},
+            { "ruta": "7", "vagon":"0", "nombreEstacion":"Portal de Suba" },
+            { "ruta": "B50", "vagon":"0", "nombreEstacion":"Portal de Suba" }]`;
