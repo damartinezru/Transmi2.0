@@ -39,7 +39,7 @@ $.ajax({
 function grabar() {
   estaciones.where(function (estacion) {
     if (estacion.Estacion == "LA DESPENSA") {
-      estacion.Rutas = [{ ruta: "G42", vagon: "1" }, { ruta: "G43", vagon: "1" }, { ruta: "G45", vagon: "2" }, { ruta: "K42", vagon: "1" }, { ruta: "K43", vagon: "1" }];
+      estacion.Rutas = [{ "ruta": "G42", "vagon": "1" }, { ruta: "G43", vagon: "1" }, { ruta: "G45", vagon: "2" }, { ruta: "K42", vagon: "1" }, { ruta: "K43", vagon: "1" }];
     }
     if (estacion.Estacion == "BOSA") {
       estacion.Rutas = [{ ruta: "E44", vagon: "2" }, { ruta: "G42", vagon: "2" }, { ruta: "G44", vagon: "1" }, { ruta: "G45", vagon: "1" }, { ruta: "K42", vagon: "2" }];
@@ -151,7 +151,7 @@ function grabar() {
     }
     if (estacion.Estacion == "Puentelargo") {
       estacion.Rutas = [
-        { Ruta: "7", sentido: "Ricaurte - Portal Suba", Vagon: "1", Horario: "LV:4:30AM-11PM S:5AM-11PM D-F:5:30AM-10PM" },
+        { Ruta: "7", "sentido": "Ricaurte - Portal Suba", "Vagon": "1", "Horario": "LV:4:30AM-11PM S:5AM-11PM D-F:5:30AM-10PM" },
         { Ruta: "7", sentido: " Portal Suba - Ricaurte", vagon: "1", Horario: "LV:4:30AM-11PM S:5AM-11PM D-F:5:30AM-10PM" },
         { Ruta: "C15", vagon: "0", Horario: "L-S | 05:00 AM - 11:00 PM D-F | 05:30 AM - 10:00 PM" },
         { Ruta: "C17", vagon: "2", Horario: "L-V | 05:00 AM - 08:00 PM S | 05:00 AM - 08:00 PM" },
@@ -317,7 +317,12 @@ function imprimir(data){
          uli2.setAttribute('class','uli2');
          const btn2=document.createElement('input');
          btn2.setAttribute('type','button');
-         btn2.value=item.Rutas; //aqui se pasar la coleccion de rutas
+        // $.each(item.Rutas,function(index,value){
+        //    btn2.value=value.Ruta;
+           
+        // });
+        
+         btn2.value=item.Rutas; //aqui podria pasar la coleccion de rutas
          contenedor2.appendChild(uli2);
          uli2.appendChild(btn2);
          
