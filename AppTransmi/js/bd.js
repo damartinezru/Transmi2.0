@@ -6,6 +6,7 @@ var db = new loki('trasmilenio.db', {
 });
 var estaciones = db.addCollection('estaciones');
 var rutas = db.addCollection("rutas");
+var estacionRuta;
 
 function databaseInitialize() {
   if (!db.getCollection("estaciones")) {
@@ -76,6 +77,7 @@ function imprimir(data) {
     btn.setAttribute('class', 'btn');
     
     btn.value = item.Estacion;
+    estacionRuta = item.Estacion;
     contenedor.appendChild(btn);
     
 
@@ -113,7 +115,7 @@ function imprimir(data) {
       panel.appendChild(contenedor3);
       contenedor3.innerHTML='';
       
-      $.each(MostrarVagon(this.value), function (index,value) {
+      $.each(MostrarVagon(estacionRuta,this.value), function (index,value) {
         const btn3 = document.createElement('input');
         btn3.setAttribute('type', 'button');
         btn3.setAttribute('class','btn3');
@@ -144,9 +146,9 @@ function Limpiar(){
   
 }
 
-function MostrarVagon(datorut){
+function MostrarVagon(datoest,datorut){
   var resultado = $.grep(rutas.data, function (value) {
-    return value.Ruta== datorut;
+    return value.Nomest== datoest && value.Ruta== datorut;
   });
   
   return resultado;
