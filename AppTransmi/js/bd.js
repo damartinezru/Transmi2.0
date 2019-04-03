@@ -69,46 +69,67 @@ function imprimir(data) {
   contenedor.setAttribute('class', 'contenedor');
   panel.appendChild(contenedor);
   contenedor.innerHTML = '';
-  //  $('.contenedor').empty();
   estaciones.find({ 'Troncal': data }).forEach(item => {
-    const uli = document.createElement('ul');
-    uli.setAttribute('class', 'uli');
-    
+  
     const btn = document.createElement('input');
     btn.setAttribute('type', 'button');
     btn.setAttribute('class', 'btn');
+    
     btn.value = item.Estacion;
     contenedor.appendChild(btn);
     
 
   });
-  
 
   if ($(".btn").click(
     function () {
+      
       const contenedor2 = document.createElement('div');
       contenedor2.setAttribute('class', 'contenedor2');
       contenedor2.setAttribute('style', 'float:right')
       panel.appendChild(contenedor2);
       contenedor2.innerHTML='';
-      
-      const uli2 = document.createElement('ul');
-      uli2.setAttribute('class', 'uli2');
-      
+      $('.contenedor2').empty();
       
       $.each(MostrarRutas(this.value), function (index,value) {
         const btn2 = document.createElement('input');
         btn2.setAttribute('type', 'button');
+        btn2.setAttribute('class','btn2');
+
         btn2.value = value.Ruta;
         contenedor2.appendChild(btn2);
         
+      });
+      
+
+      if ($(".btn2").click(function(){
+        
+        $('.contenedor2').empty();
+        $('.contenedor').empty();
+
+      const contenedor3 = document.createElement('div');
+      contenedor3.setAttribute('class', 'contenedor3');
+      contenedor3.setAttribute('style', 'float:right')
+      panel.appendChild(contenedor3);
+      contenedor3.innerHTML='';
+      
+      $.each(MostrarVagon(this.value), function (index,value) {
+        const btn3 = document.createElement('input');
+        btn3.setAttribute('type', 'button');
+        btn3.setAttribute('class','btn3');
+        btn3.value = value.Vagon;
+        contenedor3.appendChild(btn3);
         
       });
-
-
+  
+    }));
+        
     }
+
+    
   ));
-  //  $('.contenedor2').empty();
+
+ 
  
 }
 
@@ -121,4 +142,12 @@ function MostrarRutas(dato) {
 function Limpiar(){
   $(".data").empty();
   
+}
+
+function MostrarVagon(datorut){
+  var resultado = $.grep(rutas.data, function (value) {
+    return value.Ruta== datorut;
+  });
+  
+  return resultado;
 }

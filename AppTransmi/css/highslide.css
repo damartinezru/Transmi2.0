@@ -6,7 +6,7 @@
 .highslide-container div {
 	font-family: Verdana, Helvetica;
 	font-size: 10pt;
-	width: 690px;
+	/* width: 690px; */
 }
 .highslide-container table {
 	background: none;
@@ -342,7 +342,7 @@ html>/**/body .highslide-gallery ul img {
 	display: none;
 }
 .highslide-body {
-	width: 900px;
+	/* width: 900px; */
 	
 }
 .highslide-resize {
