@@ -298,6 +298,7 @@ html>/**/body .highslide-gallery ul img {
 .highslide-html-content {
 	display: none;
 	width: 900px;
+	margin: 0 auto;
 }
 .highslide-header {
 	padding-bottom: 5px;
