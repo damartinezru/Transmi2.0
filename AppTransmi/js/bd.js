@@ -78,7 +78,6 @@ function imprimir(data) {
     btn.setAttribute('class', 'btn');
     
     btn.value = item.Estacion;
-    estacionRuta = item.Estacion;
     contenedor.appendChild(btn);
     
 
@@ -123,7 +122,7 @@ function imprimir(data) {
         info.setAttribute('class','info');
         info.value = value.Vagon;
         contenedor3.appendChild(info);
-        $('contenedor3').css("float","left");
+        $('contenedor3').css({"float":"left","width":"340px"});
       });
   
     }));
