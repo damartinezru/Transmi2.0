@@ -62,6 +62,7 @@ function LeerJson() {
 
 // }
 
+//crea el html donde se van a pintar los datos
 function imprimir(data) {
   
   document.getElementById(data).innerHTML = '';
