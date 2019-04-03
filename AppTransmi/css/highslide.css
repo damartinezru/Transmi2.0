@@ -298,7 +298,6 @@ html>/**/body .highslide-gallery ul img {
 .highslide-html-content {
 	display: none;
 	width: 900px;
-	padding: 0 5px 5px 5px;
 }
 .highslide-header {
 	padding-bottom: 5px;
@@ -342,8 +341,9 @@ html>/**/body .highslide-gallery ul img {
 	display: none;
 }
 .highslide-body {
-	/* width: 900px; */
-	
+	width: 400px;
+	height: 400px;
+	margin: 0 auto;
 }
 .highslide-resize {
 	cursor: nw-resize;
