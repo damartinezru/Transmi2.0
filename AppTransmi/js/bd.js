@@ -62,12 +62,14 @@ function LeerJson() {
 // }
 
 function imprimir(data) {
+  
   document.getElementById(data).innerHTML = '';
   const panel = document.getElementById(data);
   const contenedor = document.createElement('div');
   contenedor.setAttribute('class', 'contenedor');
   panel.appendChild(contenedor);
   contenedor.innerHTML = '';
+  //  $('.contenedor').empty();
   estaciones.find({ 'Troncal': data }).forEach(item => {
     const uli = document.createElement('ul');
     uli.setAttribute('class', 'uli');
@@ -76,11 +78,11 @@ function imprimir(data) {
     btn.setAttribute('type', 'button');
     btn.setAttribute('class', 'btn');
     btn.value = item.Estacion;
-    contenedor.appendChild(uli);
-    uli.appendChild(btn);
+    contenedor.appendChild(btn);
+    
 
   });
-
+  
 
   if ($(".btn").click(
     function () {
@@ -88,7 +90,8 @@ function imprimir(data) {
       contenedor2.setAttribute('class', 'contenedor2');
       contenedor2.setAttribute('style', 'float:right')
       panel.appendChild(contenedor2);
-
+      contenedor2.innerHTML='';
+      
       const uli2 = document.createElement('ul');
       uli2.setAttribute('class', 'uli2');
       
@@ -97,14 +100,16 @@ function imprimir(data) {
         const btn2 = document.createElement('input');
         btn2.setAttribute('type', 'button');
         btn2.value = value.Ruta;
-        contenedor2.appendChild(uli2);
-        uli2.appendChild(btn2);
+        contenedor2.appendChild(btn2);
+        
         
       });
 
+
     }
   ));
-
+  //  $('.contenedor2').empty();
+ 
 }
 
 function MostrarRutas(dato) {
@@ -112,5 +117,8 @@ function MostrarRutas(dato) {
     return value.Nomest == dato;
   });
   return resultado;
-
+}
+function Limpiar(){
+  $(".data").empty();
+  
 }

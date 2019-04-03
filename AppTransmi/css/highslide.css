@@ -6,10 +6,12 @@
 .highslide-container div {
 	font-family: Verdana, Helvetica;
 	font-size: 10pt;
+	width: 690px;
 }
 .highslide-container table {
 	background: none;
 	table-layout: auto;
+	
 }
 .highslide {
 	outline: none;
@@ -295,7 +297,7 @@ html>/**/body .highslide-gallery ul img {
 }
 .highslide-html-content {
 	display: none;
-	width: 400px;
+	width: 900px;
 	padding: 0 5px 5px 5px;
 }
 .highslide-header {
@@ -340,6 +342,8 @@ html>/**/body .highslide-gallery ul img {
 	display: none;
 }
 .highslide-body {
+	width: 900px;
+	
 }
 .highslide-resize {
 	cursor: nw-resize;
@@ -927,6 +931,7 @@ html>/**/body .highslide-gallery ul img {
 }
 .highslide-wrapper, .highslide-outline {
 	background: white;
+	
 }
 .glossy-dark {
 	background: #111;

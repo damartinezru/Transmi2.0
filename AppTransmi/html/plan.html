@@ -28,8 +28,8 @@
 
 </head>
 
-<body>
-  <section>
+<body >
+  
     <div id="agrupar">
       <header id="cabecera">
 
@@ -46,37 +46,26 @@
           <li><a class="link" href="contacto.html" title="contacto">CONTACTO</a></li>
         </ul>
       </nav>
-
+    
+    <section id="seccion">
       <article>
 
-
-
-        <img src="../images/MapaCompleto.jpg" alt="" usemap="#imgmap1" style="border: none;" />
+        <img src="../images/MapaCompleto.jpg" alt="" usemap="#imgmap1" style="border: none; margin:2%;" />
 
         <map id="imgmap1" name="imgmap1">
-          <area shape="rect" coords="17,68,221,114" onclick="hs.htmlExpand(this,{contentId:'troncalnorte'})" />
-          <area shape="rect" coords="418,79,221,125"onclick="hs.htmlExpand(this,{contentId:'troncalCaracas'})" />
-          <area shape="rect" coords="557,43,358,68" onclick="hs.htmlExpand(this,{contentId:'troncal10'})" />
-          <area shape="poly" coords="167,103,218,172,441,175,432,60,405,67,405,152,230,151,206,103"
-            onclick="return hs.htmlExpand(this,{contentId:'troncalNQS'})" />
-          <area shape="poly" coords="375,15,403,37,407,88,386,91,388,51,367,30"
-            onclick="return hs.htmlExpand(this,{contentId:'troncalEje'})" />
-          <area shape="poly" coords="423,80,474,88,589,159,506,153,468,115,426,103"
-            onclick="return hs.htmlExpand(this,{contentId:'troncalCaracasSur'})" />
-          <area shape="poly" coords="540,159,560,181,554,214,538,186,522,163"
-            onclick="return hs.htmlExpand(this,{contentId:'troncalTunal'})" />
-          <area shape="poly" coords="499,201,498,263,562,335,534,342,478,269,472,199,429,172,435,144"
-            onclick="return hs.htmlExpand(this,{contentId:'troncalNQSsur'})" />
-          <area shape="poly" coords="434,274,434,311,505,321,404,192,404,100,383,102,386,173,386,219,410,246"
-            onclick="return hs.htmlExpand(this,{contentId:'troncalAmericas'})" />
-          <area shape="poly" coords="202,154,110,156,76,199,73,251,101,255,98,195,128,173,148,168,201,171"
-            onclick="return hs.htmlExpand(this,{contentId:'troncalSuba'})" />
-          <area shape="poly" coords="224,99,222,137,159,195,138,223,138,293,162,279,162,234,202,193,234,161,251,112"
-            onclick="return hs.htmlExpand(this,{contentId:'troncal80'})" />
-          <area shape="poly"
-            coords="342,156,311,199,290,233,289,266,293,351,327,351,331,241,367,174,373,81,368,27,342,29,343,57"
-            onclick="return hs.htmlExpand(this,{contentId:'troncal26'})" />
-          <area shape="rect" coords="124,43,354,69" onclick="return hs.htmlExpand(this,{contentId:'troncal26'})" />
+          <area shape="rect" coords="17,68,221,114" onclick="imprimir('Autonorte');hs.htmlExpand(this,{contentId:'troncalnorte'});" />
+          <area shape="rect" coords="418,79,221,125"onclick="imprimir('Caracas');hs.htmlExpand(this,{contentId:'troncalCaracas'});" />
+          <area shape="rect" coords="557,43,358,68" onclick="imprimir('Calle 10');hs.htmlExpand(this,{contentId:'troncal10'})" />
+          <area shape="poly" coords="167,103,218,172,441,175,432,60,405,67,405,152,230,151,206,103"onclick="return hs.htmlExpand(this,{contentId:'troncalNQS'});" />
+          <area shape="poly" coords="375,15,403,37,407,88,386,91,388,51,367,30"onclick="return hs.htmlExpand(this,{contentId:'troncalEje'});" />
+          <area shape="poly" coords="423,80,474,88,589,159,506,153,468,115,426,103"onclick="return hs.htmlExpand(this,{contentId:'troncalCaracasSur'});Limpiar(); " />
+          <area shape="poly" coords="540,159,560,181,554,214,538,186,522,163"onclick="return hs.htmlExpand(this,{contentId:'troncalTunal'});" />
+          <area shape="poly" coords="499,201,498,263,562,335,534,342,478,269,472,199,429,172,435,144"onclick="return hs.htmlExpand(this,{contentId:'troncalNQSsur'});Limpiar();" />
+          <area shape="poly" coords="434,274,434,311,505,321,404,192,404,100,383,102,386,173,386,219,410,246"onclick="return hs.htmlExpand(this,{contentId:'troncalAmericas'});" />
+          <area shape="poly" coords="202,154,110,156,76,199,73,251,101,255,98,195,128,173,148,168,201,171"onclick="imprimir('Suba');hs.htmlExpand(this,{contentId:'troncalSuba'});" />
+          <area shape="poly" coords="224,99,222,137,159,195,138,223,138,293,162,279,162,234,202,193,234,161,251,112"onclick="return hs.htmlExpand(this,{contentId:'troncal80'});" />
+          <area shape="poly"coords="342,156,311,199,290,233,289,266,293,351,327,351,331,241,367,174,373,81,368,27,342,29,343,57"onclick="return hs.htmlExpand(this,{contentId:'troncal26'});" />
+          <area shape="rect" coords="124,43,354,69" onclick="return hs.htmlExpand(this,{contentId:'troncalMuseo'});" />
 
 
         </map>
@@ -85,16 +74,12 @@
         <div class="highslide-html-content" id="troncalCaracas">
 
           <div class="highslide-header">
-            <li class="highslide-close"><a href="#" onclick="return hs.close(this)">cerrar</a></li>
+            <li class="highslide-close"><a href="#" onclick="Limpiar();return hs.close(this);">cerrar</a></li>
           </div>
 
-          <div class="highslide-body">
+          <div class="highslide-body" >
             <h2>A| Caracas</h2>
             <img width="370" src="../images/Caracas.jpg" alt="gráfica alusiva troncal caracas " />
-            <div id='Caracas'>
-              <input type="button" value="Estaciones" onclick="imprimir('Caracas')">
-              
-            </div>
           </div>
 
           <div class="highslide-footer">
@@ -106,15 +91,13 @@
         <div class="highslide-html-content" id="troncalnorte">
 
           <div class="highslide-header">
-            <li class="highslide-close"><a href="#" onclick="return hs.close(this)">cerrar</a></li>
+            <li class="highslide-close"><a href="#" onclick="Limpiar();return hs.close(this)">cerrar</a></li>
           </div>
 
           <div class="highslide-body">
             <h2>B| Norte </h2>
             <img width="370" src="../images/AutoNorte.jpg" alt="gráfica alusiva troncal Norte " />
-            <div id="Autonorte">
-              <input type="button" value="Estaciones" onclick="imprimir('Autonorte')">
-            </div>
+    
           </div>
 
           <div class="highslide-footer">
@@ -126,18 +109,12 @@
         <div class="highslide-html-content" id="troncalSuba">
 
           <div class="highslide-header">
-            <li class="highslide-close"><a href="#" onclick="return hs.close(this)">cerrar</a></li>
+            <li class="highslide-close"><a href="#" onclick="Limpiar();hs.close(this);">cerrar</a></li>
           </div>
 
           <div class="highslide-body">
             <h2>C| Suba</h2>
             <img width="370" src="../images/Suba.jpg" alt="gráfica alusiva Troncal Suba " />
-
-            <div id="Suba">
-              <input type="button" value="Estaciones" onclick="imprimir('Suba')">
-              
-            </div>
-
           </div>
 
           <div class="highslide-footer">
@@ -149,7 +126,7 @@
         <div class="highslide-html-content" id="troncal80">
 
           <div class="highslide-header">
-            <li class="highslide-close"><a href="#" onclick="return hs.close(this)">cerrar</a></li>
+            <li class="highslide-close"><a href="#" onclick="Limpiar();return hs.close(this)">cerrar</a></li>
           </div>
 
           <div class="highslide-body">
@@ -167,7 +144,7 @@
         <div class="highslide-html-content" id="troncalNQS">
 
           <div class="highslide-header">
-            <li class="highslide-close"><a href="#" onclick="return hs.close(this)">cerrar</a></li>
+            <li class="highslide-close"><a href="#" onclick="Limpiar();return hs.close(this)">cerrar</a></li>
           </div>
 
           <div class="highslide-body">
@@ -185,7 +162,7 @@
         <div class="highslide-html-content" id="troncalAmericas">
 
           <div class="highslide-header">
-            <li class="highslide-close"><a href="#" onclick="return hs.close(this)">cerrar</a></li>
+            <li class="highslide-close"><a href="#" onclick="Limpiar();return hs.close(this)">cerrar</a></li>
           </div>
 
           <div class="highslide-body">
@@ -198,7 +175,7 @@
         <div class="highslide-html-content" id="troncalNQSsur">
 
           <div class="highslide-header">
-            <li class="highslide-close"><a href="#" onclick="return hs.close(this)">cerrar</a></li>
+            <li class="highslide-close"><a href="#" onclick="Limpiar();return hs.close(this)">cerrar</a></li>
           </div>
 
           <div class="highslide-body">
@@ -216,7 +193,7 @@
         <div class="highslide-html-content" id="troncalCaracasSur">
 
           <div class="highslide-header">
-            <li class="highslide-close"><a href="#" onclick="return hs.close(this)">cerrar</a></li>
+            <li class="highslide-close"><a href="#" onclick="Limpiar();return hs.close(this)">cerrar</a></li>
           </div>
 
           <div class="highslide-body">
@@ -233,7 +210,7 @@
         <div class="highslide-html-content" id="troncalTunal">
 
           <div class="highslide-header">
-            <li class="highslide-close"><a href="#" onclick="return hs.close(this)">cerrar</a></li>
+            <li class="highslide-close"><a href="#" onclick="Limpiar();return hs.close(this)">cerrar</a></li>
           </div>
 
           <div class="highslide-body">
@@ -251,7 +228,7 @@
         <div class="highslide-html-content" id="troncalEje">
 
           <div class="highslide-header">
-            <li class="highslide-close"><a href="#" onclick="return hs.close(this)">cerrar</a></li>
+            <li class="highslide-close"><a href="#" onclick="Limpiar();return hs.close(this)">cerrar</a></li>
           </div>
 
           <div class="highslide-body">
@@ -269,7 +246,7 @@
         <div class="highslide-html-content" id="troncal26">
 
           <div class="highslide-header">
-            <li class="highslide-close"><a href="#" onclick="return hs.close(this)">cerrar</a></li>
+            <li class="highslide-close"><a href="#" onclick="Limpiar();return hs.close(this)">cerrar</a></li>
           </div>
 
           <div class="highslide-body">
@@ -277,17 +254,19 @@
             <img width="370" src="../images/Calle26.jpg" alt="gráfica alusiva troncal Calle 26 " />
 
           </div>
-        </div>
-        <div class="highslide-footer">
+          <div class="highslide-footer">
           <div><span class="highslide-resize" title="Resize"></span></div>
         </div>
 
-    </div>
+        </div>
+        
+
+    
 
     <div class="highslide-html-content" id="troncal10">
 
       <div class="highslide-header">
-        <li class="highslide-close"><a href="#" onclick="return hs.close(this)">cerrar</a></li>
+        <li class="highslide-close"><a href="#" onclick="Limpiar();return hs.close(this)">cerrar</a></li>
       </div>
 
       <div class="highslide-body">
@@ -303,7 +282,7 @@
 
     <div class="highslide-html-content" id="troncalMuseo">
       <div class="highslide-header">
-        <li class="highslide-close"><a href="#" onclick="return hs.close(this)">cerrar</a></li>
+        <li class="highslide-close"><a href="#" onclick="Limpiar();return hs.close(this)">cerrar</a></li>
       </div>
 
       <div class="highslide-body">
@@ -316,9 +295,33 @@
         <div><span class="highslide-resize" title="Resize"></span></div>
       </div>
     </div>
+
+    </article>
+    <article>
+        <div id="Suba" class="data"></div>
+        <div id='Caracas' class="data"></div>
+        <div id="Autonorte" class="data"></div>
+      
     </article>
   </section>
-  </div>
+
+  <aside>
+        <button class="btontrooncales" id="caracas"> A| Caracas </button>
+        <button class="btontrooncales" id="diez"> L| Carrera 10 </button>
+        <button class="btontrooncales" id="veits"> K| Calle 26 </button>
+        <button class="btontrooncales" id="eje"> J| Eje Ambiental </button>
+        <button class="btontrooncales" id="tunal"> H| Caracas Tunal </button>
+        <button class="btontrooncales" id="nqssu"> G| NQS sur </button>
+        <button class="btontrooncales" id="america"> F| Portal Americas </button>
+        <button class="btontrooncales" id="nqsc"> E| NQS Central </button>
+        <button class="btontrooncales" id="ochet"> D| Portal 80 </button>
+        <button class="btontrooncales" id="suba" > C| Suba </button>
+        <button class="btontrooncales" id="norte"> B| Norte </button>
+        <button class="btontrooncales" id="museo"> M| Carrera Septima </button>
+
+    </aside>
+    </div>
+
   <footer id="pie">
     <ul class="map">
       <li>
