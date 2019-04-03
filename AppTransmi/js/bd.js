@@ -1,3 +1,4 @@
+var x;
 var db = new loki('trasmilenio.db', {
   autoload: true,
   autoloadCallback: databaseInitialize,
@@ -69,6 +70,7 @@ function imprimir(data) {
   contenedor.setAttribute('class', 'contenedor');
   panel.appendChild(contenedor);
   contenedor.innerHTML = '';
+  
   estaciones.find({ 'Troncal': data }).forEach(item => {
   
     const btn = document.createElement('input');
@@ -95,10 +97,12 @@ function imprimir(data) {
         const btn2 = document.createElement('input');
         btn2.setAttribute('type', 'button');
         btn2.setAttribute('class','btn2');
-
+        // this.value=$(this).val();
+        // $(this).data('valestacion',$(this.Nomest));
         btn2.value = value.Ruta;
+        // $(this).data('valestacion',$(this).val());
         contenedor2.appendChild(btn2);
-        
+        x=value.Nomest;
       });
       
 
@@ -109,17 +113,16 @@ function imprimir(data) {
 
       const contenedor3 = document.createElement('div');
       contenedor3.setAttribute('class', 'contenedor3');
-      contenedor3.setAttribute('style', 'float:right')
       panel.appendChild(contenedor3);
       contenedor3.innerHTML='';
       
-      $.each(MostrarVagon(this.value), function (index,value) {
-        const btn3 = document.createElement('input');
-        btn3.setAttribute('type', 'button');
-        btn3.setAttribute('class','btn3');
-        btn3.value = value.Vagon;
-        contenedor3.appendChild(btn3);
-        
+      $.each(MostrarVagon(x,this.value), function (index,value) {
+        const info = document.createElement('textarea');
+        // btn3.setAttribute('style', 'readonly');
+        info.setAttribute('class','info');
+        info.value = value.Vagon;
+        contenedor3.appendChild(info);
+        $('contenedor3').css("float","left");
       });
   
     }));
@@ -144,9 +147,9 @@ function Limpiar(){
   
 }
 
-function MostrarVagon(datorut){
+function MostrarVagon(datoest,datorut){
   var resultado = $.grep(rutas.data, function (value) {
-    return value.Ruta== datorut;
+    return value.Nomest==datoest && value.Ruta== datorut;
   });
   
   return resultado;
