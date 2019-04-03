@@ -1,3 +1,4 @@
+var x;
 var db = new loki('trasmilenio.db', {
   autoload: true,
   autoloadCallback: databaseInitialize,
@@ -15,7 +16,6 @@ function databaseInitialize() {
     }
   }
 }
-
 
 $.ajax({
   method: "POST",
@@ -38,13 +38,14 @@ $.ajax({
     LeerJson();
   });
 
+
 function LeerJson() {
   var RJ = JSON.parse(rutasJson);
   RJ.forEach(item => {
     rutas.insert({
       Ruta: item.ruta,
       Vagon: item.vagon,
-      Nomest: item.nombreEstacion,
+      Nomest: item.estacion,
     })
   });
   console.log(rutas.find());
@@ -63,50 +64,77 @@ function LeerJson() {
 
 //crea el html donde se van a pintar los datos
 function imprimir(data) {
-  //
+  
   document.getElementById(data).innerHTML = '';
   const panel = document.getElementById(data);
   const contenedor = document.createElement('div');
   contenedor.setAttribute('class', 'contenedor');
   panel.appendChild(contenedor);
   contenedor.innerHTML = '';
+  
   estaciones.find({ 'Troncal': data }).forEach(item => {
-    const uli = document.createElement('ul');
-    uli.setAttribute('class', 'uli');
-    
+  
     const btn = document.createElement('input');
     btn.setAttribute('type', 'button');
     btn.setAttribute('class', 'btn');
+    
     btn.value = item.Estacion;
-    contenedor.appendChild(uli);
-    uli.appendChild(btn);
+    contenedor.appendChild(btn);
+    
 
   });
 
-
   if ($(".btn").click(
     function () {
+      
       const contenedor2 = document.createElement('div');
       contenedor2.setAttribute('class', 'contenedor2');
       contenedor2.setAttribute('style', 'float:right')
       panel.appendChild(contenedor2);
-
-      const uli2 = document.createElement('ul');
-      uli2.setAttribute('class', 'uli2');
-      
+      contenedor2.innerHTML='';
+      $('.contenedor2').empty();
       
       $.each(MostrarRutas(this.value), function (index,value) {
         const btn2 = document.createElement('input');
         btn2.setAttribute('type', 'button');
+        btn2.setAttribute('class','btn2');
+        // this.value=$(this).val();
+        // $(this).data('valestacion',$(this.Nomest));
         btn2.value = value.Ruta;
-        contenedor2.appendChild(uli2);
-        uli2.appendChild(btn2);
-        
+        // $(this).data('valestacion',$(this).val());
+        contenedor2.appendChild(btn2);
+        x=value.Nomest;
       });
+      
 
+      if ($(".btn2").click(function(){
+        
+        $('.contenedor2').empty();
+        $('.contenedor').empty();
+
+      const contenedor3 = document.createElement('div');
+      contenedor3.setAttribute('class', 'contenedor3');
+      panel.appendChild(contenedor3);
+      contenedor3.innerHTML='';
+      
+      $.each(MostrarVagon(x,this.value), function (index,value) {
+        const info = document.createElement('textarea');
+        // btn3.setAttribute('style', 'readonly');
+        info.setAttribute('class','info');
+        info.value = value.Vagon;
+        contenedor3.appendChild(info);
+        $('contenedor3').css({"float":"left","width":"340px"});
+      });
+  
+    }));
+        
     }
+
+    
   ));
 
+ 
+ 
 }
 
 function MostrarRutas(dato) {
@@ -114,8 +142,16 @@ function MostrarRutas(dato) {
     return value.Nomest == dato;
   });
   return resultado;
-
+}
+function Limpiar(){
+  $(".data").empty();
+  
 }
 
-
-
+function MostrarVagon(datoest,datorut){
+  var resultado = $.grep(rutas.data, function (value) {
+    return value.Nomest==datoest && value.Ruta== datorut;
+  });
+  
+  return resultado;
+}

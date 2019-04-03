@@ -17,7 +17,7 @@ body{
     background: -ms-linear-gradient(top, rgba(225,220,191,1) 0%, rgba(225,220,191,1) 18%, rgb(244, 48, 48) 87%, rgba(249,236,102,1) 20%, rgba(245,234,193,1) 100%);
     background: linear-gradient(to bottom, rgba(225,220,191,1) 0%, rgba(225,220,191,1) 18%,rgb(244, 48, 48) 87%, rgba(249,236,102,1) 20%, rgba(245,234,193,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e1dcbf', endColorstr='#f5eac1', GradientType=0 );*/
-    /*background: rgba(240,158,104,1);
+/*background: rgba(240,158,104,1);
 background: -moz-linear-gradient(top, rgba(240,158,104,1) 0%, rgba(240,158,104,1) 1%, rgba(204,45,20,1) 21%, rgba(184,44,22,1) 27%, rgba(194,61,54,1) 80%, rgba(209,92,84,1) 88%, rgba(240,158,104,1) 96%, rgba(240,158,104,1) 100%);
 background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(240,158,104,1)), color-stop(1%, rgba(240,158,104,1)), color-stop(21%, rgba(204,45,20,1)), color-stop(27%, rgba(184,44,22,1)), color-stop(80%, rgba(194,61,54,1)), color-stop(88%, rgba(209,92,84,1)), color-stop(96%, rgba(240,158,104,1)), color-stop(100%, rgba(240,158,104,1)));
 background: -webkit-linear-gradient(top, rgba(240,158,104,1) 0%, rgba(240,158,104,1) 1%, rgba(204,45,20,1) 21%, rgba(184,44,22,1) 27%, rgba(194,61,54,1) 80%, rgba(209,92,84,1) 88%, rgba(240,158,104,1) 96%, rgba(240,158,104,1) 100%);
@@ -114,12 +114,16 @@ header, section, footer, aside, nav, article, figure, figcaption, hgroup, #agrup
     padding: 20px;
     background: #CCCCCC;
 }
- .mapaIndex:hover{
-    -ms-transform: scale(1.7); /* IE 9 */  
-  -webkit-transform: scale(1.7); /* Safari 3-8 */
-  transform: scale(1.7); 
-   
- }
+ /*#contMapa:hover{
+  -ms-transform: scale(1.2)  IE 9 ; 
+  -webkit-transform: scale(1.7) Safari 3-8 ;
+  transform: scale(1.2); 
+  
+ }*/
+
+ /*#contMapa{
+     zoom: 1.0;
+ }*/
 .contenedorMapaIndex{
     cursor: zoom-in;
 }
@@ -171,7 +175,7 @@ a.map {
 }
 
 article {
-    background: #FFFBCC;
+    background: none;
     border: 1px solid #999999;
     padding: 20px;
     margin-bottom: 15px;
@@ -197,7 +201,7 @@ button {
     width: 200px;
     margin-bottom: 5px;
     border-radius: 10px;
-    color: white;
+    color:white;
 }
 #caracas{
     background-color: #00358b;
