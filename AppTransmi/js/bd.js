@@ -80,6 +80,43 @@ function imprimir(data) {
     
     btn.value = item.Estacion;
     contenedor.appendChild(btn);
+
+    if(data=='Autonorte'){
+      $('.btn').css({'background':'#95B734','margin':'10px 5px 10px 5px','color':'white'});
+      }else if(data=='Caracas'){
+        $('.btn').css({'background':'#00398B','margin':'10px 5px 10px 5px','color':'white'});
+      
+      }else if(data=='Calle 26'){
+        $('.btn').css({'background':'#CAB07C','margin':'10px 5px 10px 5px','color':'white'});
+      
+      }else if(data=='Calle 80'){
+        $('.btn').css({'background':'#7B6CA7','margin':'10px 5px 10px 5px','color':'white'});
+      
+      }else if(data=='Suba'){
+        $('.btn').css({'background':'#EABF3B','margin':'10px 5px 10px 5px','color':'white'});
+      
+      }else if(data=='Américas'){
+        $('.btn').css({'background':'#BB0615','margin':'10px 5px 10px 5px','color':'white'});
+      
+      }else if(data=='Eje Ambiental'){
+        $('.btn').css({'background':'#D0A2AA','margin':'10px 5px 10px 5px','color':'white'});
+      
+      }else if(data=='NQS Central'){
+        $('.btn').css({'background':'#9C6C0C','margin':'10px 5px 10px 5px','color':'white'});
+      
+      }else if(data=='NQS Sur'){
+        $('.btn').css({'background':'#D88C00','margin':'10px 5px 10px 5px','color':'white'});
+      
+      }else if(data=='Carrera 7'){
+        $('.btn').css({'background':'#8A0079','margin':'10px 5px 10px 5px','color':'white'});
+      
+      }else if(data=='Carrera 10'){
+        $('.btn').css({'background':'#00949C','margin':'10px 5px 10px 5px','color':'white'});
+      
+      }else if(data=='Caracas Sur'){
+        $('.btn').css({'background':'#D88C00','margin':'10px 5px 10px 5px','color':'white'});
+      
+      }
     
 
   });
@@ -98,11 +135,10 @@ function imprimir(data) {
         const btn2 = document.createElement('input');
         btn2.setAttribute('type', 'button');
         btn2.setAttribute('class','btn2');
-        // this.value=$(this).val();
-        // $(this).data('valestacion',$(this.Nomest));
         btn2.value = value.Ruta;
-        // $(this).data('valestacion',$(this).val());
         contenedor2.appendChild(btn2);
+        $('.btn2').addClass("btn btn-outline-danger");
+        $('.btn').css({'margin':'10px 5px 10px 5px'});
         x=value.Nomest;
       });
       
@@ -119,11 +155,14 @@ function imprimir(data) {
       
       $.each(MostrarVagon(x,this.value), function (index,value) {
         const info = document.createElement('textarea');
-        // btn3.setAttribute('style', 'readonly');
         info.setAttribute('class','info');
-        info.value = value.Vagon;
+        info.setAttribute('cols','60' );
+        info.setAttribute('rows','2');
+        info.value = "Este bus para en el vagon:"+value.Vagon;
         contenedor3.appendChild(info);
-        $('contenedor3').css({"float":"left","width":"340px"});
+        
+        $('.contenedor3').css({'float':'left','width':'140px'});
+        $('.info').css({'float':'left','background-color':'transparent','border':'none','font-family': ('Rubik', 'sans-serif'),'font-size': '40px','padding':'10%','color': '#C60000'});
       });
   
     }));
